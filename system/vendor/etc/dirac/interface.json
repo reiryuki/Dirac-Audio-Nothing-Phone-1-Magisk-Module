@@ -1,0 +1,251 @@
+{
+ "interfaceVersion": {
+  "majorVersion": 1,
+  "minorVersion": 1,
+  "patchVersion": 0
+ },
+ "uuid": "9eee44e1-f120-4e63-aa8e-7604efa20ed0",
+ "archiveMetaData": {},
+ "description": "",
+ "configurations": [
+  {
+   "name": "MUSIC",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "group_id": {
+     "stringValue": "0"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "0.1"
+    },
+    "OutputType": {
+     "stringValue": "speaker"
+    },
+    "bypass_gain_db": {
+     "stringValue": "-20"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "MOVIE",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "group_id": {
+     "stringValue": "0"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "0.1"
+    },
+    "OutputType": {
+     "stringValue": "speaker"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    },
+    "bypass_gain_db": {
+     "stringValue": "-20"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "GAME",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "bypass_gain_lin": {
+     "stringValue": "0.1"
+    },
+    "group_id": {
+     "stringValue": "0"
+    },
+    "OutputType": {
+     "stringValue": "speaker"
+    },
+    "bypass_gain_db": {
+     "stringValue": "-20"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "SPEECH",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "group_id": {
+     "stringValue": "0"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "0.1"
+    },
+    "OutputType": {
+     "stringValue": "speaker"
+    },
+    "bypass_gain_db": {
+     "stringValue": "-20"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "EXT_1",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "bypass_gain_lin": {
+     "stringValue": "1"
+    },
+    "group_id": {
+     "stringValue": "1"
+    },
+    "OutputType": {
+     "stringValue": "headset"
+    },
+    "bypass_gain_db": {
+     "stringValue": "0"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "EXT_2",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "group_id": {
+     "stringValue": "1"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "1"
+    },
+    "OutputType": {
+     "stringValue": "headset"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    },
+    "bypass_gain_db": {
+     "stringValue": "0"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "EXT_3",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "StreamType": {
+     "stringValue": "normal"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "1"
+    },
+    "group_id": {
+     "stringValue": "1"
+    },
+    "bypass_gain_db": {
+     "stringValue": "0"
+    },
+    "OutputType": {
+     "stringValue": "headset"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  },
+  {
+   "name": "EXT_4",
+   "rtCoreVersion": {
+    "majorVersion": 2,
+    "minorVersion": 0,
+    "patchVersion": 1
+   },
+   "signalChainMetaData": {
+    "group_id": {
+     "stringValue": "1"
+    },
+    "bypass_gain_lin": {
+     "stringValue": "1"
+    },
+    "OutputType": {
+     "stringValue": "headset"
+    },
+    "bypass_gain_db": {
+     "stringValue": "0"
+    },
+    "StreamType": {
+     "stringValue": "normal"
+    }
+   },
+   "parameters": [],
+   "numInputs": 2,
+   "numOutputs": 2
+  }
+ ],
+ "creator": "Flow 4.2.0",
+ "creatorVersion": {
+  "majorVersion": 4,
+  "minorVersion": 2,
+  "patchVersion": 0
+ },
+ "author": "thomas.boden@dirac.com",
+ "project": "Phone1DMP",
+ "manufacturer": "Nothing",
+ "processorLibraryVersion": {
+  "majorVersion": 5,
+  "minorVersion": 0,
+  "patchVersion": 0
+ },
+ "creationTime": "2024-01-26T10:28:10Z"
+}
