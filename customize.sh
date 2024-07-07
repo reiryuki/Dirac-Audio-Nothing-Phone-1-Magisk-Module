@@ -71,7 +71,7 @@ fi
 mount_partitions_in_recovery
 
 # bit
-AUDIO64BIT=`grep linker64 /vendor/bin/hw/*audio*`
+AUDIO64BIT=`grep linker64 /*/bin/hw/*audio*`
 if [ "$LIST32BIT" ]; then
   if [ "$IS64BIT" == true ]; then
     ui_print "- 64 bit architecture"
@@ -89,7 +89,7 @@ if [ "$LIST32BIT" ]; then
     abort
   fi
 else
-  abort "! Doesn't support 32 bit library"
+  abort "! This ROM doesn't support 32 bit library"
 fi
 
 # magisk
@@ -219,8 +219,8 @@ if echo "$PROP" | grep -q m; then
   sed -i 's|musicstream=|musicstream=true|g' $MODPATH/acdb*.conf
   sed -i 's|music_stream false|music_stream true|g' $MODPATH/service.sh
   ui_print "  Sound FX will always be enabled"
-  ui_print "  Dirac Toggler app will be removed"
-  rm -rf `find $MODPATH -type d -name DiracDMPToggler`
+  ui_print "  Dirac on/off toggler app will be removed"
+  rm -rf `find $MODPATH -type d -name DiracDMPUI`
   ui_print " "
 else
   APPS=AudioFX

@@ -123,11 +123,9 @@ if [ "$UID" ] && [ "$UID" -gt 9999 ]; then
 fi
 
 # grant
-PKG=com.reiryuki.diracdmptoggler
-appops set $PKG SYSTEM_ALERT_WINDOW allow
+PKG=com.reiryuki.diracdmpui
 if [ "$API" -ge 33 ]; then
-  pm grant $PKG android.permission.POST_NOTIFICATIONS
-  appops set $PKG ACCESS_RESTRICTED_SETTINGS allow
+  pm revoke $PKG android.permission.POST_NOTIFICATIONS
 fi
 
 # audio flinger
