@@ -37,12 +37,15 @@
 ## Troubleshootings
 - Global: https://t.me/androidryukimodsdiscussions/29836
 
+## Tested on
+- Android 14 LineageOS ROM
+
+## Known Issue
+- The sound in Bluetooth audio is like in internal speaker
+
 ## Support & Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
 - If you don't do above, issues will be closed immediately
-
-## Tested on
-- Android 14 LineageOS ROM
 
 ## Credits and Contributors
 - https://t.me/viperatmos
