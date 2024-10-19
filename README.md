@@ -12,14 +12,15 @@
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/nothing/spacewar qssi-user-14-UP1A.231005.007-2406122149-release-keys
-- libmagiskpolicy.so: Kitsune Mask R65C33E4F
+- libmagiskpolicy.so: Kitsune Mask R6687BB53
 
 ## Screenshots
 - https://t.me/androidryukimods/2309
 
 ## Requirements
+- armeabi-v7a or arm64-v8a architecture
 - 32 bit audio service (this also can be found in 64 bit ROM with 32 bit support, not only 32 bit ROM)
-- Android 9 and up
+- Android 9 (SDK 28) and up
 - Magisk or KernelSU installed
 
 ## Installation Guide & Download Link
@@ -37,9 +38,6 @@
 ## Troubleshootings
 - Global: https://t.me/androidryukimodsdiscussions/29836
 
-## Tested on
-- Android 14 LineageOS ROM
-
 ## Known Issue
 - The sound in Bluetooth audio is like in internal speaker
 
@@ -48,11 +46,12 @@
 - If you don't do above, issues will be closed immediately
 
 ## Credits and Contributors
+- @HuskyDG
 - https://t.me/viperatmos
 - https://t.me/androidryukimodsdiscussions
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Sponsors
-- https://t.me/androidryukimodsdiscussions/2619
+- https://t.me/ryukinotes/25
 
 
