@@ -3,5 +3,6 @@
     <privapp-permissions package="com.nothing.dirac_DMP">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 </permissions>
