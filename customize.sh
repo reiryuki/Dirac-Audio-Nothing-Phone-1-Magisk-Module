@@ -86,26 +86,26 @@ fi
 NAME=arm64-v8a
 NAME2=armeabi-v7a
 if ! echo "$ABILIST" | grep -q $NAME; then
-  rm -rf `find $MODPATH/system -type d -name *64*`
-  if [ "$BOOTMODE" != true ]; then
-    ui_print "! This Recovery doesn't support $NAME architecture"
-    ui_print "  Try to install via Magisk app instead"
-    ui_print " "
-  fi
-fi
-if ! echo "$ABILIST" | grep -q $NAME2; then
-  if [ "$BOOTMODE" == true ]; then
-    abort "! This ROM doesn't support $NAME2 architecture"
+  if echo "$ABILIST" | grep -q $NAME2; then
+    rm -rf `find $MODPATH/system -type d -name *64*`
   else
-    ui_print "! This Recovery doesn't support $NAME2 architecture"
-    ui_print "  Try to install via Magisk app instead"
+    if [ "$BOOTMODE" == true ]; then
+      ui_print "! This ROM doesn't support $NAME nor $NAME2 architecture"
+    else
+      ui_print "! This Recovery doesn't support $NAME nor $NAME2 architecture"
+      ui_print "  Try to install via Magisk app instead"
+    fi
     abort
   fi
 fi
-if ! file /*/bin/hw/*hardware*audio* | grep -q 32-bit; then
-  ui_print "! This module uses 32 bit audio service only"
-  ui_print "  But this ROM uses 64 bit audio service"
-  abort
+if ! echo "$ABILIST" | grep -q $NAME2; then
+  rm -rf $MODPATH/system*/lib\
+   $MODPATH/system*/vendor/lib
+  if [ "$BOOTMODE" != true ]; then
+    ui_print "! This Recovery doesn't support $NAME2 architecture"
+    ui_print "  Try to install via Magisk app instead"
+    ui_print " "
+  fi
 fi
 
 # magisk
@@ -234,9 +234,8 @@ if echo "$PROP" | grep -q m; then
   sed -i 's|#m||g' $FILE
   sed -i 's|musicstream=|musicstream=true|g' $MODPATH/acdb*.conf
   sed -i 's|music_stream false|music_stream true|g' $MODPATH/service.sh
-  ui_print "  Sound FX will always be enabled"
-  ui_print "  Dirac on/off toggler app will be removed"
-  rm -rf `find $MODPATH -type d -name DiracDMPUI`
+  ui_print "  The sound effect will always be enabled"
+  ui_print "  and cannot be disabled by on/off toggler"
   ui_print " "
 else
   APPS=AudioFX

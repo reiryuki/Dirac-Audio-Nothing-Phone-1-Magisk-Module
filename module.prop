@@ -1,8 +1,8 @@
 id=DiracAudio
 name=Dirac Audio Nothing Phone 1
-version=v0.4
-versionCode=4
+version=v0.5
+versionCode=5
 author=Rei Ryuki the Fixer
-description=Global type sound effect ported from Nothing Phone 1 (Spacewar) for any armeabi-v7a or arm64-v8a architecture, Android 9 (SDK 28) and up.
+description=Equalizer global type sound effect ported from Nothing Phone 1 (Spacewar) for any armeabi-v7a or arm64-v8a architecture, Android 9 (SDK 28) and up.
 
 
