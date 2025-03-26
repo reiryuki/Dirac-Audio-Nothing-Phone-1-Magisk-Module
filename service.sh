@@ -138,6 +138,11 @@ if [ "$LOG" != stopped ] && [ "$SIZE" -gt 50 ]; then
   LOG=stopped
 fi
 }
+restart_process() {
+killall com.dirac.acs
+sleep 1
+killall com.nothing.dirac_DMP
+}
 check_audioserver() {
 if [ "$NEXTPID" ]; then
   PID=$NEXTPID
@@ -148,7 +153,7 @@ sleep 15
 stop_log
 NEXTPID=`pidof $SERVER`
 if [ "`getprop init.svc.$SERVER`" != stopped ]; then
-  [ "$PID" != "$NEXTPID" ] && killall $PROC
+  [ "$PID" != "$NEXTPID" ] && restart_process
 else
   start $SERVER
 fi
@@ -156,8 +161,7 @@ check_audioserver
 }
 
 # check
-PROC=com.dirac.acs
-killall $PROC
+restart_process
 check_audioserver
 
 
