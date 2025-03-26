@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
     <hidden-api-whitelisted-app package="com.nothing.dirac_DMP"/>
-    <allow-implicit-broadcast action="android.intent.action.USER_PRESENT"/>
 </config>
