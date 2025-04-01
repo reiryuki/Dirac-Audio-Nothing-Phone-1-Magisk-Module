@@ -10,9 +10,6 @@ allow init { system_file system_lib_file vendor_file vendor_configs_file } { dir
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_default_prop file { read open getattr map }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } system_file file write
 
-# service_manager
-allow location fwk_sensor_service service_manager find
-
 # additional
 allow { hal_audio_default mtk_hal_audio audioserver } { system_suspend_hwservice default_android_hwservice } hwservice_manager find
 allow { hal_audio_default mtk_hal_audio audioserver } hal_system_suspend_service service_manager find
