@@ -6,9 +6,34 @@ create { system_lib_file vendor_file vendor_configs_file }
 allow { system_file system_lib_file vendor_file vendor_configs_file } labeledfs filesystem associate
 allow init { system_file system_lib_file vendor_file vendor_configs_file } { dir file } relabelfrom
 
+## services
+
 # file
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_default_prop file { read open getattr map }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } system_file file write
+
+# chr_file
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_dev chr_file { read write open ioctl }
+
+## UI
+
+# file
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { sysfs_migt vendor_frc_prop vendor_displayfeature_prop proc_perfmgr migt_file } file read
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } proc_mi_log file write
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_frc_prop file { open getattr map }
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_displayfeature_prop proc_perfmgr migt_file sysfs_migt } file open
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file { getattr map }
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } proc_perfmgr file ioctl
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { migt_file sysfs_migt } file getattr
+
+# chr_file
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_dev chr_file search
+
+# dir
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { proc_perfmgr migt_file mcd_data_file } dir search
+
+# unix_stream_socket
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
 
 # additional
 allow { hal_audio_default mtk_hal_audio audioserver } { system_suspend_hwservice default_android_hwservice } hwservice_manager find
