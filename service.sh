@@ -24,7 +24,8 @@ else
   SERVER=mediaserver
 fi
 killall $SERVER\
- android.hardware.audio@4.0-service-mediatek
+ android.hardware.audio@4.0-service-mediatek\
+ android.hardware.audio.service
 
 # wait
 sleep 20
@@ -132,9 +133,6 @@ if appops get $PKG > /dev/null 2>&1; then
     pm revoke $PKG android.permission.POST_NOTIFICATIONS
   fi
 fi
-
-# audio flinger
-#DMAF=`dumpsys media.audio_flinger`
 
 # function
 stop_log() {
