@@ -7,6 +7,10 @@ set -x
 
 # var
 API=`getprop ro.build.version.sdk`
+if [ ! -d $MODPATH/vendor ]\
+|| [ -L $MODPATH/vendor ]; then
+  MODSYSTEM=/system
+fi
 
 # prop
 resetprop -n ro.audio.ignore_effects false
@@ -32,23 +36,13 @@ sleep 20
 
 # aml fix
 AML=/data/adb/modules/aml
-if [ -L $AML/system/vendor ]\
-&& [ -d $AML/vendor ]; then
-  DIR=$AML/vendor/odm/etc
-else
-  DIR=$AML/system/vendor/odm/etc
-fi
+DIR=$AML$MODSYSTEM/vendor/odm/etc
 if [ "$API" -ge 26 ] && [ -d $DIR ]\
 && [ ! -f $AML/disable ]; then
   chcon -R u:object_r:vendor_configs_file:s0 $DIR
 fi
 AUD=`grep AUD= $MODPATH/copy.sh | sed -e 's|AUD=||g' -e 's|"||g'`
-if [ -L $AML/system/vendor ]\
-&& [ -d $AML/vendor ]; then
-  DIR=$AML/vendor
-else
-  DIR=$AML/system/vendor
-fi
+DIR=$AML$MODSYSTEM/vendor
 FILES=`find $DIR -type f -name $AUD`
 if [ -d $AML ] && [ ! -f $AML/disable ]\
 && find $DIR -type f -name $AUD; then
@@ -157,11 +151,7 @@ fi
 sleep 15
 stop_log
 NEXTPID=`pidof $SERVER`
-if [ "`getprop init.svc.$SERVER`" != stopped ]; then
-  [ "$PID" != "$NEXTPID" ] && restart_process
-else
-  start $SERVER
-fi
+[ "$PID" != "$NEXTPID" ] && restart_process
 check_audioserver
 }
 
