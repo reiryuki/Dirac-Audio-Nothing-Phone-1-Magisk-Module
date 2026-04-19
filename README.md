@@ -59,13 +59,6 @@ v0.6
 - Fix architecture detection in some weird ROMs
 - Fix bug in uninstall.sh
 
-v0.5
-- Fix Bluetooth Audio sound
-- Fix toggler
-- Add auto/music/movie/game/navigate option
-- Add 64 bit audio service support
-- Fix permissions
-
 ## Screenshots
 - https://t.me/ryukimodsscreenshots/41
 
