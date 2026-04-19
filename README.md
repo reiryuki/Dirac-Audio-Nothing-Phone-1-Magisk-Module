@@ -14,6 +14,58 @@
 - /system/vendor/lib64: https://dumps.tadiphone.dev/dumps/nothing/pong qssi-user-14-UP1A.231005.007-2410161700-release-keys
 - libmagiskpolicy.so: Kitsune Mask R6687BB53
 
+## Changelog
+
+v1.5
+- Does not disable raw playback (You can use Audio Compatibility Patch Reborn Magisk Module instead)
+
+v1.4
+- Fix wrong target in latest KernelSU
+
+v1.3
+- Fix crashes
+
+v1.2
+- Tidy up aml.sh
+- Exclude audioeffectshaptic.xml
+-:Fix wrong file permissions in some ROMs
+
+v1.1
+- Fix selinux denials
+- Abort installation if fail to mount mirror system
+
+v1.0
+- Fix SDK detections in NothingDiracService_DMP.apk
+- Fix BLUETOOTH_CONNECT permission
+- Improve /odm and /my_product support detection
+
+v0.9
+- Detects settings secure audio_effect_enable and dirac_mode state on boot
+
+v0.8
+- Fix state detection on boot
+- Revert targetSDK to 34 and fix the crashes
+- Remove android.intent.action.USER_PRESENT receiver
+- Apply sound effect to patch and rerouting stream by default
+- Add new optional dirac.game
+
+v0.7
+- Fix a crash in SDK 32 and bellow
+- DiracDMPUI.apk v1.4
+- Fix receiver android.intent.action.USER_PRESENT not allowed in background
+
+v0.6
+- Add Action button to clear apps caches
+- Fix architecture detection in some weird ROMs
+- Fix bug in uninstall.sh
+
+v0.5
+- Fix Bluetooth Audio sound
+- Fix toggler
+- Add auto/music/movie/game/navigate option
+- Add 64 bit audio service support
+- Fix permissions
+
 ## Screenshots
 - https://t.me/ryukimodsscreenshots/41
 
@@ -25,7 +77,7 @@
 
 ## Installation Guide & Download Link
 - If you are using KernelSU, you need to disable Unmount Modules by Default in KernelSU app settings and install https://github.com/KernelSU-Modules-Repo/meta-overlayfs first
-- Install this module https://www.pling.com/p/2169185/ via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
+- Install this module via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
 - Install AML Magisk Module https://t.me/ryukinotes/34 only if using any other else audio mod module
 - Reboot
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
